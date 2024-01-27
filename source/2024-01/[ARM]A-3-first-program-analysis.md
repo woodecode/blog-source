@@ -177,7 +177,7 @@ Reset_Handler   PROC
                 ENDP
 ```
 
-### 详解汇编
+### 详细过程
 
 #### 1 使能 GPIOA
 
