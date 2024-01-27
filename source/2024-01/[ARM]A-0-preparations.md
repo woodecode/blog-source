@@ -14,7 +14,9 @@
 }
 ```
 
-# ARM架构 汇编
+# ARM架构学习准备(STM32F103)
+
+![ARM CM3 LOGO](image/arm_logo.png)
 
 ここからノートを始めます。
 
