@@ -16,7 +16,7 @@
 
 # ARM架构学习准备(STM32F103)
 
-![ARM CM3 LOGO](image/arm_logo.png)
+<img src="image/arm_logo.png" alt="ARM CM3 LOGO" style="zoom: 50%;" />
 
 ここからノートを始めます。
 
