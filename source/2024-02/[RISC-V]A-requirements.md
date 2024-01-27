@@ -15,11 +15,19 @@
 
 # RISC-V开发环境搭建
 
-## VM
 
-.
 
-## WSL2
+## 在WSL2上搭建环境
 
-.
+### 1 安装 WSL2
+
+### 2 
+
+### n 安装WSLtty
+
+链接 https://github.com/mintty/wsltty/releases 
+
+选择下载 wsltty-3.7.0.2-x86_64-install.exe
+
+
 

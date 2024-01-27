@@ -4,7 +4,7 @@
         "title": "第一个程序",
         "date": "2024-01-17",
         "author": "3oR",
-        "tags": ["ARM", "Embedded"],
+        "tags": ["ARM"],
         "categories": ["ARM"],
         "description": "文章描述",
         "cover": "封面图片链接",

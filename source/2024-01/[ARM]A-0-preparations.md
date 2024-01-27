@@ -4,7 +4,7 @@
         "title": "ARM架构学习准备",
         "date": "2024-01-21",
         "author": "3oR",
-        "tags": ["Example1", "Example1"],
+        "tags": ["ARM"],
         "categories": ["ARM"],
         "description": "文章描述",
         "cover": "封面图片链接",
