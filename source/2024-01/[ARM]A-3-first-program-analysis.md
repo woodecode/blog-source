@@ -251,21 +251,67 @@ while (1)
 }
 ```
 
-改写成汇编
+在C程序中，使用`while (1) `实现无条件循环。在汇编中，可以这样做。
+
+```assembly
+loop
+		; do something ...
+        B loop
+```
+
+最终该段的汇编如下
 
 ```assembly
 ; GPIOA_BASE = 0x40010800
 ; GPIO_ODR_offset = 0x0C
 LDR R2, =(0x40010800 + 0x0C)
 
+loop
+        ; *p |= (uint32_t)(1 << 8);
+        LDR R1, [R2]
+        ORR R1, R1, #0x100 
+        STR R1, [R2]
+        ; call delay() function
+        LDR R0, =(500000)
+        BL delay
 
+        ; *p &= ~(uint32_t)(1 << 8);
+        LDR R1, [R2]
+        ; BIC指令用于将寄存器中的一个或多个特定位 清0。
+        BIC R1, R1, #0x100 
+        STR R1, [R2]
+        ; call delay() function
+        LDR R0, =(500000)
+        BL delay
+
+        B loop
 ```
 
 #### 4 delay函数
 
 最后还缺一个`delay`函数
 
+```c
+void delay(uint32_t n)
+{
+	while(n--);
+}
+```
 
+改写成汇编如下
+
+```assembly
+delay	PROC
+
+        SUBS R0, R0, #1
+        BNE delay
+        BX LR
+        NOP
+
+        ENDP
+```
+
+.
 
 ### 最终结果
 
