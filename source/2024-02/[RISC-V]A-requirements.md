@@ -21,7 +21,13 @@
 
 ### 1 安装 WSL2
 
-### 2 
+### 2 创建新系统
+
+wsl.exe --list --online
+
+wsl.exe --install Ubuntu-20.04
+
+Enter new UNIX username: 
 
 ### n 安装WSLtty
 
