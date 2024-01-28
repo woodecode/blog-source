@@ -2,9 +2,9 @@
 {
     "front-matter": {
         "title": "代码重定位",
-        "date": "2024-01-27",
+        "date": "2024-01-25",
         "author": "3oR",
-        "tags": ["ARM", "Example1"],
+        "tags": ["ARM", "relocation"],
         "categories": ["ARM"],
         "description": "文章描述",
         "cover": "封面图片链接",

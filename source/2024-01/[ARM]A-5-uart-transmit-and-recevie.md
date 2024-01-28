@@ -2,7 +2,7 @@
 {
     "front-matter": {
         "title": "UART编程",
-        "date": "2024-01-22",
+        "date": "2024-01-24",
         "author": "3oR",
         "tags": ["ARM", "UART"],
         "categories": ["ARM"],
