@@ -18,7 +18,7 @@
 
 # 第一个程序-点亮LED灯(以STM32F103为例)
 
-## GPIO操作逻辑
+## GPIO操作逻辑 🟢
 
 GPIO操作本质就是 **读/写特定寄存器的数据**。至于芯片内部的硬件电路如何实现由寄存器到引脚的链接我们不需要了解。 
 
@@ -40,7 +40,7 @@ GPIO一般以组为单位。如`STM32F103RCT6` 中就由 A/B/C/D四组GPIO ABC�
 
 
 
-## GPIO操作的步骤实现
+## GPIO操作的步骤实现 🟡
 
 具体配置和操作GPIO需要查看参考手册，在Google中搜索 **RM0008** 也可以找到这些文档。
 
@@ -49,27 +49,24 @@ GPIO一般以组为单位。如`STM32F103RCT6` 中就由 A/B/C/D四组GPIO ABC�
 | 英文 | https://www.keil.com/dd/docs/datashts/st/stm32f10xxx.pdf   |
 | 中文 | https://shequ.stmicroelectronics.cn/thread-620287-1-1.html |
 
-
+### 设置 RCC
 
 1 时钟RCC，使能GPIOx
 
-
+### 设置 GPIOx
 
 2 设置引脚的配置: 上拉输出
 
 
 
-## GPIO操作的具体实现
+## GPIO操作的具体实现 🟡
 
-
+下面分别使用指针直接操作和使用结构体指针操作两种实现方式。
 
 ### 使用指针实现
 
 ```c
-/*
-
-*/
-#include <stdint.h>
+typedef unsigned int uint32_t;
 
 #define PERIPH_BASE 	(0x40000000UL)
 #define AHBPERIPH_BASE  (PERIPH_BASE + 0x00020000UL)
