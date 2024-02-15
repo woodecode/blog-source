@@ -32,10 +32,17 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb-multiarch",
-            "miDebuggerServerAddress": "localhost:1234",
-            "preLaunchTask": ""
+            "miDebuggerServerAddress": "localhost:1234"
         }
     ]
+}
+```
+
+### task.json
+
+```
+{
+	"" : ""
 }
 ```
 
