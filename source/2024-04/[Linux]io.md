@@ -19,34 +19,34 @@
 
 ## 文件操作
 
-- 文件操作
-  - `fopen()` 
-  
-    - >```c
-      >#include <stdio.h>
-      >#include <stdlib.h>
-      >
-      >int main()
-      >{
-      >    FILE *fp;
-      >    fp = fopen();
-      >    if(fp == NULL)
-      >    {
-      >		printf("fopen() failed, errno = %d\n", errno);
-      >        exit(1);
-      >    }
-      >    printf("OK\n");
-      >    
-      >    exit(0);
-      >}
-      >```
-  
-  - `fclose()` 
-  
-    - >a
-      >
-      >
-  
+### fopen()
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    fp = fopen();
+    if(fp == NULL)
+    {
+		printf("fopen() failed, errno = %d\n", errno);
+     //  
+        exit(1);
+    }
+    printf("OK\n");
+    
+    exit(0);
+}
+```
+
+- `fclose()` 
+
+  - >a
+    >
+    >
+
 ## 字符操作/二进制文件操作
 
   - `fgetc()` 
