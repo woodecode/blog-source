@@ -19,33 +19,34 @@
 
 ## 文件操作
 
-### fopen()
+### fopen()/fclose() 
 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
+#include <string.h> // strerror
 
 int main()
 {
     FILE *fp;
-    fp = fopen();
+    fp = fopen("temp", "r");
     if(fp == NULL)
     {
-		printf("fopen() failed, errno = %d\n", errno);
-     //  
+		fprintf(stderr, "fopen() failed, errno = %d\n", errno);
+        perror("fopen():");
+        fprintf(stderr, "fopen():%s\n", strerror(error));
         exit(1);
     }
     printf("OK\n");
+    
+    fclose(fp);
     
     exit(0);
 }
 ```
 
-- `fclose()` 
-
-  - >a
-    >
-    >
+.
 
 ## 字符操作/二进制文件操作
 
