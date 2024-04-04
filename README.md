@@ -49,6 +49,8 @@
 
 👉[**代码仓库**](https://github.com/u3oR/FreeRTOS_UART_Packaging) 
 
+> 韦东山-FreeRTOS下UART的封装 https://www.bilibili.com/video/BV1jx4y1Y7N8
+
 | 序号 | FreeRTOS下UART的封装                                         | 完成情况 |
 | ---- | ------------------------------------------------------------ | -------- |
 | 零   | [FreeRTOS下UART的封装](source/2024-04/[FreeRTOS]uart_packaging_under_rtos.md) | 🟡        |
