@@ -40,7 +40,7 @@ SPI（串行外设接口）是一种广泛使用的同步串行数据通信协�
 
 - **SS (Slave Select) 或 CS (Chip Select)** - 从设备选择或芯片选择。这个引脚由主设备控制，用于激活特定的从设备。在多从设备的系统中，每个从设备通常会有自己的选择信号线。当这个引脚为低电平时（通常配置），相应的从设备被选中并可以开始通信。
 
-### 极性和相位 Clock Polarity and Clock Phase
+### 通讯模式 极性和相位 Clock Polarity and Clock Phase
 
 
 CPOL（Clock Polarity，时钟极性）和CPHA（Clock Phase，时钟相位）是SPI（Serial Peripheral Interface，串行外设接口）协议中用于定义时钟信号特性的两个参数，它们决定了数据应当在时钟信号的哪个边缘进行采样和传输。不同的CPOL和CPHA的组合定义了四种SPI通信模式，使得SPI能够兼容不同外设的时钟和数据采样要求。
@@ -70,13 +70,15 @@ CPHA决定了**数据在时钟的哪一边缘被采样**（主设备读取MISO�
 | 模式 2  | 1 (空闲时SCK高电平) | 0 (第一个边缘)  | SCK下降沿之前 | SCK下降沿    |
 | 模式 3  | 1 (空闲时SCK高电平) | 1 (第二个边缘)  | SCK下降沿之后 | SCK上升沿    |
 
-### 通信时序
+### 通讯时序
+
+![SPI发送数据动图](https://img-blog.csdnimg.cn/b0ffe0de93704815bde367dbc8dba062.gif)
 
 下面的四幅图显示了四种SPI模式下的通信示例。
 
-传输的**开始和结束用绿色虚线表示**，**采样沿用橙子表示**，而**移位沿用蓝色表示**。
+⚠️传输的**开始和结束用绿色虚线表示**，**采样沿用橙子表示**，而**移位沿用蓝色表示**。
 
-🟡实际使用较多的是**模式0**和**模式3**。
+🟢实际使用较多的是**模式0**和**模式3**。
 
 #### 模式0
 
@@ -84,17 +86,42 @@ CPHA决定了**数据在时钟的哪一边缘被采样**（主设备读取MISO�
 
 …
 
+## QSPI（Quad Serial Peripheral Interface）
 
+### 简介
 
-### GPIO模拟
+QSPI（Quad Serial Peripheral Interface）是SPI（串行外设接口）的一种扩展。它允许全双工数据传输，通常用于与高速串行闪存等设备通信。QSPI的“Quad”指的是它使用四个数据线，相比传统的单线SPI（单个MISO和MOSI），QSPI能提供更高的数据传输率。
 
+### 设备连接框图
 
+![](https://os.mbed.com/docs/mbed-os/v6.16/apis/images/quadspi.png)
 
+### 通讯时序
 
+> https://doc-en.rvspace.org/JH7100/Datasheet/JH7100_DS/qspi_interface_and_timing.html
+>
+> 四路输出快速读取阵列
+>
+> ![img](https://doc-en.rvspace.org/JH7100/Datasheet/Image/JH7100_DS/qspi_fast_read.jpg)
+>
+> 四输入快速字节/页编程![img](https://doc-en.rvspace.org/JH7100/Datasheet/Image/JH7100_DS/qspi_fast_byte_page_program.jpg)
+>
+> .
 
-## QSPI
+QSPI Flash（Quad SPI Flash）是一种高速非易失性存储解决方案，它使用Quad SPI接口进行数据传输。在与QSPI Flash通信时，会有几个不同的阶段，每个阶段都有其特定的时序要求。这些阶段通常包括：
 
+- 指令阶段 
 
+  在这个阶段，主设备通过单个数据线（IO0）发送指令到Flash存储器。指令定义了将要执行的操作类型，如读取、写入、擦除或读取设备状态。
+- 地址阶段
 
+  如果操作需要访问Flash内部的特定地址，如读取或写入数据，主设备在此阶段通过单个或多个数据线发送地址信息。地址通常是24位或32位，依赖于Flash的地址范围。
 
+- 数据阶段
+
+  数据可以通过四条数据线（IO0到IO3）并行传输，这提高了数据传输效率。在读取操作中，Flash存储器会在这个阶段将数据发送回主设备。在编程操作中，主设备将数据发送到Flash进行存储。
+
+- 空闲或等待阶段
+
+  在某些操作之后，如编程或擦除，Flash存储器可能需要一段时间来完成内部处理。在这段时间里，SPI总线可能会进入空闲状态，主设备可能需要轮询设备状态寄存器以确定操作何时完成。
 
