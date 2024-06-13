@@ -1,4 +1,4 @@
-# 3oR’s blog source
+3oR’s blog source
 
 = = = = = = = = = =
 
