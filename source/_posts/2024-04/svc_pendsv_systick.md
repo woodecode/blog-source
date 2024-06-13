@@ -1,19 +1,16 @@
-
-```json
-{
-    "front-matter": {
-        "title": "SVC，PendSV和SysTick",
-        "date": "2024-04-01",
-        "author": "我是谁",
-        "tags": ["FreeRTOS", "Example1"],
-        "categories": ["FreeRTOS", "Cate1"],
-        "description": "文章描述",
-        "cover": "封面图片链接",
-        "featured": false, 
-        "draft": true 
-	}
-}
-```
+---
+title: SVC，PendSV和SysTick
+date: 2024-04-01
+author: 3oR
+categories:
+  - FreeRTOS
+# cover: /images/cover.jpg # 文章封面图片路径
+# thumbnail: /images/thumbnail.jpg # 缩略图路径
+description: ARM Cortex-M处理器中SVC、PendSV和SysTick中断的处理机制及其在任务切换中的应用
+# keywords: PendSV, SysTick, STM32, FreeRTOS
+top: true # 置顶文章（可选）
+comments: true # 是否开启评论
+---
 
 # SVC，PendSV和SysTick
 

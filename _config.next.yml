@@ -160,6 +160,7 @@ site_state: false
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
+# 社交媒体
 social:
   BiliBili: https://space.bilibili.com/400635132 || fa-brands fa-bilibili
   GitHub: https://github.com/u3oR || fab fa-github
