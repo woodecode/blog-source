@@ -1,0 +1,66 @@
+@import 'variables'
+
+/* 引入 prismjs 代码高亮样式 */
+@media (prefers-color-scheme: light) {
+  @import "prism.css"
+}
+@media (prefers-color-scheme: dark) {
+  @import "prism-okaidia.css"
+}
+
+/**********************************************************/
+/************************* 全站背景 ************************/
+/**********************************************************/
+
+/* 隐藏顶部线条 */
+.headband {
+  display: none;
+}
+
+
+/* 顶部边距 */
+.header,
+.main-inner {
+  margin-top: 10px;
+
+  +mobile() {
+    margin-top: 0;
+  }
+}
+
+
+/* 侧边圆角 */
+header.header, //顶部标题
+.sidebar-inner { //侧边头像
+  border-radius: $myradius;
+}
+
+.site-brand-container {
+  border-radius: $myradius $myradius 0 0;
+
+  +mobile() {
+    border-radius: 0 0 $myradius $myradius;
+  }
+}
+
+
+
+
+/**********************************************************/
+/************************ 文章 ****************************/
+/**********************************************************/
+
+/* 文章卡片 */
+.post-block {
+  border-radius: $myradius !important;
+}
+
+/* 文章与页面标题 */
+.posts-expand .post-title {
+  font-size: 1.45em;
+  font-weight: bold;
+
+  +mobile() {
+    margin-top: 10px;
+  }
+}

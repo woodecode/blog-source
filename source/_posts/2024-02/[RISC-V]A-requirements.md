@@ -1,18 +1,19 @@
-```json
-{
-    "front-matter": {
-        "title": "RISC-V开发环境搭建",
-        "date": "2024-02-01",
-        "tags": ["RISC-V", "WSL"],
-        "categories": ["RISC-V"],
-        "description": "NULL",
-        "cover": "封面图片链接",
-        "featured": false, 
-        "draft": true 
-	}
-}
-```
-
+---
+title: RISC-V开发环境搭建
+date: 2024-02-01
+author: 3oR
+categories:
+  - RISC-V
+tags:
+  - RISC-V
+  - WSL
+# cover: /images/cover.jpg # 文章封面图片路径
+# thumbnail: /images/thumbnail.jpg # 缩略图路径
+description: 文章描述，这里可以是一段简短的介绍
+# keywords: 关键字1, 关键字2 # SEO 关键字
+top: false # 置顶文章（可选）
+comments: true # 是否开启评论
+---
 # RISC-V开发环境搭建
 
 

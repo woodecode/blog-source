@@ -6,11 +6,15 @@ categories:
   - FreeRTOS
 # cover: /images/cover.jpg # 文章封面图片路径
 # thumbnail: /images/thumbnail.jpg # 缩略图路径
-description: ARM Cortex-M处理器中SVC、PendSV和SysTick中断的处理机制及其在任务切换中的应用
 # keywords: PendSV, SysTick, STM32, FreeRTOS
 top: true # 置顶文章（可选）
 comments: true # 是否开启评论
 ---
+
+
+ARM Cortex-M处理器中SVC、PendSV和SysTick中断的处理机制及其在任务切换中的应用
+
+<!-- more -->
 
 # SVC，PendSV和SysTick
 
