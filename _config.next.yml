@@ -162,9 +162,9 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 # 社交媒体
 social:
-  BiliBili: https://space.bilibili.com/400635132 || fa-brands fa-bilibili
-  GitHub: https://github.com/u3oR || fab fa-github
-  E-Mail: wangzhiyu.work@outlook.com || fa fa-envelope
+  # BiliBili: https://space.bilibili.com/400635132 || fa-brands fa-bilibili
+  # GitHub: https://github.com/u3oR || fab fa-github
+  # E-Mail: wangzhiyu.work@outlook.com || fa fa-envelope
 
 social_icons:
   enable: true
@@ -212,7 +212,7 @@ footer:
     # name: fa fa-heart
     name: fa fa-code
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     # color: "#ff0000" 
     color: "#004DFF"
