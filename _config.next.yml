@@ -68,7 +68,7 @@ creative_commons:
   # Available values: big | small
   size: small
   sidebar: false
-  post: false
+  post: true
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
   language:
@@ -134,24 +134,24 @@ sidebar:
   #  - always  expand for all pages automatically.
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  totally remove sidebar including sidebar toggle.
-  display: post
+  display: always
 
   # Sidebar padding in pixels.
-  padding: 18
+  padding: 21
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
-  offset: 12
+  offset: 17
 
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: https://pinlyu.com/resources/img/avatar.webp
   # If true, the avatar will be displayed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
 
 # Posts / Categories / Tags in sidebar.
-site_state: false
+site_state: true
 
 
 
@@ -189,7 +189,7 @@ toc:
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: false
+  expand_all: true
   # Maximum heading depth of generated toc.
   max_depth: 6
 
@@ -209,11 +209,13 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-heart
+    # name: fa fa-heart
+    name: fa fa-code
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    # color: "#ff0000" 
+    color: "#004DFF"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   # Set to `false` to disable the copyright statement.
@@ -282,7 +284,7 @@ reward:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.png || fab fa-weixin
+  WeChat: https://wechat.design/uploads/01095cf926a3e5ea6911885a3ebcf29f/%E5%BE%AE%E4%BF%A1.jpg || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
@@ -371,31 +373,33 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
-    style:
+    style: default
   # Fold code block
   fold:
     enable: false
     height: 500
 
+# 返回到开头
 back2top:
-  enable: true
+  enable: false
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
   scrollpercent: false
 
 # Reading progress bar
+# 阅读进度条
 reading_progress:
   enable: false
   # Available values: left | right
   start_at: left
   # Available values: top | bottom
-  position: top
+  position: bottom
   reversed: false
-  color: "#37c6c0"
-  height: 3px
+  color: "#004DFF"
+  height: 7px
 
 # Bookmark Support
 bookmark:
@@ -431,7 +435,7 @@ github_banner:
 
 
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
   host:
@@ -445,7 +449,7 @@ font:
   global:
     external: true
     family: Lato
-    size:
+    size:  1.13
 
   # Font settings for site title (.site-title).
   title:
